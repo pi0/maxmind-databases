@@ -1,5 +1,7 @@
 # Maxmind Databases
 
+[![CircleCI](https://img.shields.io/circleci/project/github/pi0/maxmind-databases.svg?style=flat-square)](https://circleci.com/gh/pi0/maxmind-databases)
+
 > Maxmind / Geolite2 databases for [node-maxmind](https://github.com/runk/node-maxmind)
 
 ## Usage

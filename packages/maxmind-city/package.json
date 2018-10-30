@@ -1,0 +1,13 @@
+{
+  "name": "maxmind-city",
+  "version": "0.0.0",
+  "description": "Maxmind GeoLite2 City Database",
+  "keywords": [
+    "geoip",
+    "maxmind",
+    "geolite",
+    "geolite2",
+    "city"
+  ],
+  "main": "index.js"
+}

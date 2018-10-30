@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function update() {
+ name=$1
+ tgzPath=db/$2
+
+ tar -xzf $tgzPath -C db
+ dir=db/`tar -tzf $tgzPath | head -n 1`
+ version=`echo $dir | grep -oE "[0-9]{8}"`
+
+ packageDir="packages/maxmind-$name"
+
+ cp -r $dir/* $packageDir
+
+ sed -i.bak "s|\"version\": .\*|\"version\": \"foo\"|" "$packageDir/package.json"
+
+ echo "$name@$version"
+}
+
+update country GeoLite2-Country.tar.gz
+update asn GeoLite2-Asn.tar.gz
+update city GeoLite2-City.tar.gz

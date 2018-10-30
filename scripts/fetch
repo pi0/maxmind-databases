@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p db
+
+echo "Fetching GeoLite2-Country..."
+curl http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz > ./db/GeoLite2-Country.tar.gz
+
+echo "Fetching GeoLite2-ASN..."
+curl http://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz > ./db/GeoLite2-ASN.tar.gz
+
+echo "Fetching GeoLite2-City..."
+curl http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz > ./db/GeoLite2-City.tar.gz

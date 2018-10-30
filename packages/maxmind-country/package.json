@@ -1,0 +1,13 @@
+{
+  "name": "maxmind-country",
+  "version": "0.0.0",
+  "description": "Maxmind GeoLite2 Country Database",
+  "keywords": [
+    "geoip",
+    "maxmind",
+    "geolite",
+    "geolite2",
+    "country"
+  ],
+  "main": "index.js"
+}

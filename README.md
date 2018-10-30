@@ -1,0 +1,151 @@
+# Maxmind Databases
+
+> Maxmind / Geolite2 databases for [node-maxmind](https://github.com/runk/node-maxmind)
+
+## Usage
+
+Require maxmind:
+
+```js
+const maxmind = require('maxmind')
+```
+
+Load either `max-city`, `max-country` or `max-asn` packages:
+
+```js
+// City Lookup
+const lookupCity = maxmind.openSync(require('maxmind-city'))
+const city = lookupCity.get('8.8.8.8')
+
+// Country Lookup
+const lookupCountry = maxmind.openSync(require('maxmind-country'))
+const country = lookupCountry.get('8.8.8.8')
+
+// ASN Lookup
+const lookupASN = maxmind.openSync(require('maxmind-asn'))
+const asn = lookupASN.get('8.8.8.8')
+```
+
+## Example results
+
+**ASN**
+
+```json
+{
+  "autonomous_system_number": 15169,
+  "autonomous_system_organization": "Google LLC"
+}
+```
+
+**Country**
+
+```json
+{
+  "continent": {
+    "code": "NA",
+    "geoname_id": 6255149,
+    "names": {
+      "de": "Nordamerika",
+      "en": "North America",
+      "es": "Norteamérica",
+      "fr": "Amérique du Nord",
+      "ja": "北アメリカ",
+      "pt-BR": "América do Norte",
+      "ru": "Северная Америка",
+      "zh-CN": "北美洲"
+    }
+  },
+  "country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  },
+  "registered_country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  }
+}
+```
+
+**City**
+
+```json
+{
+  "continent": {
+    "code": "NA",
+    "geoname_id": 6255149,
+    "names": {
+      "de": "Nordamerika",
+      "en": "North America",
+      "es": "Norteamérica",
+      "fr": "Amérique du Nord",
+      "ja": "北アメリカ",
+      "pt-BR": "América do Norte",
+      "ru": "Северная Америка",
+      "zh-CN": "北美洲"
+    }
+  },
+  "country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  },
+  "location": {
+    "accuracy_radius": 1000,
+    "latitude": 37.751,
+    "longitude": -97.822
+  },
+  "registered_country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  }
+}
+```
+
+## Development
+
+Run `./scripts/fetch` and `./scripts/update` to fetch latest databases.
+
+## License
+
+This product includes GeoLite2 data created by MaxMind, available from [http://www.maxmind.com](http://www.maxmind.com)
+
+Packages published under MIT

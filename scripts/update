@@ -18,5 +18,5 @@ function update() {
 }
 
 update country GeoLite2-Country.tar.gz
-update asn GeoLite2-Asn.tar.gz
+update asn GeoLite2-ASN.tar.gz
 update city GeoLite2-City.tar.gz

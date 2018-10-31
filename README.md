@@ -4,6 +4,17 @@
 
 > Maxmind / Geolite2 databases for [node-maxmind](https://github.com/runk/node-maxmind)
 
+## Packages
+
+✅ All packages are auto built and published every week.
+
+Package  | Size
+---------|------------------
+https://badge.fury.io/js/maxmind-asn.svg | [![install size](https://packagephobia.now.sh/badge?p=maxmind-asn)](https://packagephobia.now.sh/result?p=maxmind-asn)
+https://badge.fury.io/js/maxmind-country.svg | [![install size](https://packagephobia.now.sh/badge?p=maxmind-country)](https://packagephobia.now.sh/result?p=maxmind-country)
+https://badge.fury.io/js/maxmind-city.svg | [![install size](https://packagephobia.now.sh/badge?p=maxmind-city)](https://packagephobia.now.sh/result?p=maxmind-city)
+
+
 ## Usage
 
 Require maxmind:

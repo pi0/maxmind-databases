@@ -37,7 +37,7 @@ jobs:
         steps:
         - checkout
         - attach_workspace:
-          at: ~/project
+            at: ~/project
         - run:
             name: Publish
             command: |

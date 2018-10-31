@@ -43,6 +43,7 @@ jobs:
             command: |
                 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
                 echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                ./scripts/workspace-run cp ../../README.md .
                 ./scripts/workspace-run npm publish || true
 
 workflows:

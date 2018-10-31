@@ -1,6 +1,6 @@
 {
   "name": "maxmind-country",
-  "version": "0.0.0",
+  "version": "1.0.0-20181023",
   "description": "Maxmind GeoLite2 Country Database",
   "keywords": [
     "geoip",

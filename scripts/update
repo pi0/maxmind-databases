@@ -13,7 +13,7 @@ function update() {
 
  cp -r $dir/* $packageDir
 
- sed -i.bak "s|\"version\": .\*|\"version\": \"foo\"|" "$packageDir/package.json"
+ perl -pi -e "s|\"version\": .+|\"version\": \"1.0.0-$version\",|" "$packageDir/package.json"
 
  echo "$name@$version"
 }

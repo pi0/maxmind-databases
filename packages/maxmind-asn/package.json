@@ -1,6 +1,6 @@
 {
   "name": "maxmind-asn",
-  "version": "0.0.0",
+  "version": "1.0.0-20181030",
   "description": "Maxmind GeoLite2 ASN Database",
   "keywords": [
     "geoip",

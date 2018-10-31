@@ -1,15 +1,14 @@
 # Maxmind Databases
 
-[![CircleCI](https://img.shields.io/circleci/project/github/pi0/maxmind-databases.svg?style=flat-square)](https://circleci.com/gh/pi0/maxmind-databases)
-
 > Maxmind / Geolite2 databases for [node-maxmind](https://github.com/runk/node-maxmind)
 
 ## Packages
 
-✅ All packages are auto built and published every week.
+[![CircleCI](https://circleci.com/gh/pi0/maxmind-databases.svg?style=svg)](https://circleci.com/gh/pi0/maxmind-databases)
+ All packages are auto built and published every monday.
 
 Package | Latest  | Size
----------|------------------
+--------|---------|---------
 maxmind-country | [![npm version](https://badge.fury.io/js/maxmind-country.svg)](https://badge.fury.io/js/maxmind-country) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-country)](https://packagephobia.now.sh/result?p=maxmind-country)
 maxmind-asn | [![npm version](https://badge.fury.io/js/maxmind-asn.svg)](https://badge.fury.io/js/maxmind-asn) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-asn)](https://packagephobia.now.sh/result?p=maxmind-asn)
 maxmind-city | [![npm version](https://badge.fury.io/js/maxmind-city.svg)](https://badge.fury.io/js/maxmind-city) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-city)](https://packagephobia.now.sh/result?p=maxmind-city)

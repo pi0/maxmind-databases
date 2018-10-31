@@ -49,18 +49,7 @@ jobs:
 workflows:
   version: 2
 
-  test:
-    jobs:
-        - update
-
   update-publish:
-    # triggers:
-    #     - schedule:
-    #         cron: "0 0 * * *"
-    #         filters:
-    #             branches:
-    #                 only:
-    #                     - master
     jobs:
         - update
         - publish:
@@ -69,3 +58,17 @@ workflows:
             filters:
                 branches:
                     only: master
+
+  update-publish-cron:
+    triggers:
+        - schedule:
+            cron: "0 0 * * *"
+            filters:
+                branches:
+                    only:
+                        - master
+    jobs:
+        - update
+        - publish:
+            requires:
+                - update

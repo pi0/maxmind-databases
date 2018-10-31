@@ -90,6 +90,8 @@ const asn = lookupASN.get('8.8.8.8')
 
 **City**
 
+**NOTE:** Latitude and longitude are not precise and should not be used to identify a particular street address or household.
+
 ```json
 {
   "continent": {

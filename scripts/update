@@ -11,7 +11,7 @@ function update() {
 
  packageDir="packages/maxmind-$name"
 
- cp -r $dir/* $packageDir
+ cp -r $dir/*.mmdb $dir/LICENSE.txt $dir/COPYRIGHT.txt $packageDir
 
  perl -pi -e "s|\"version\": .+|\"version\": \"1.0.0-$version\",|" "$packageDir/package.json"
 

@@ -62,7 +62,8 @@ workflows:
   update-publish-cron:
     triggers:
         - schedule:
-            cron: "0 0 * * *"
+            # https://crontab.guru/#0_1_*_*_1
+            cron: "0 1 * * 1"
             filters:
                 branches:
                     only:

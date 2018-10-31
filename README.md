@@ -8,11 +8,11 @@
 
 ✅ All packages are auto built and published every week.
 
-Package  | Size
+Package | Latest  | Size
 ---------|------------------
-[![npm version](https://badge.fury.io/js/maxmind-asn.svg)](https://badge.fury.io/js/maxmind-asn) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-asn)](https://packagephobia.now.sh/result?p=maxmind-asn)
-[![npm version](https://badge.fury.io/js/maxmind-country.svg)](https://badge.fury.io/js/maxmind-country) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-country)](https://packagephobia.now.sh/result?p=maxmind-country)
-[![npm version](https://badge.fury.io/js/maxmind-city.svg)](https://badge.fury.io/js/maxmind-city) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-city)](https://packagephobia.now.sh/result?p=maxmind-city)
+maxmind-country | [![npm version](https://badge.fury.io/js/maxmind-country.svg)](https://badge.fury.io/js/maxmind-country) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-country)](https://packagephobia.now.sh/result?p=maxmind-country)
+maxmind-asn | [![npm version](https://badge.fury.io/js/maxmind-asn.svg)](https://badge.fury.io/js/maxmind-asn) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-asn)](https://packagephobia.now.sh/result?p=maxmind-asn)
+maxmind-city | [![npm version](https://badge.fury.io/js/maxmind-city.svg)](https://badge.fury.io/js/maxmind-city) | [![install size](https://packagephobia.now.sh/badge?p=maxmind-city)](https://packagephobia.now.sh/result?p=maxmind-city)
 
 
 ## Usage

@@ -1,34 +1,65 @@
 version: 2
+
+defaults: &defaults
+  working_directory: ~/project
+  docker:
+    - image: node
+
 jobs:
-  build:
-    working_directory: /usr/src/app
-    docker:
-      - image: node
-    steps:
-      # Checkout repository
-      - checkout
-
-      # Restore cache
-      - restore_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
-
-      # Install dependencies
-      - run:
-          name: Install Dependencies
-          command: NODE_ENV=dev yarn
-
-      # Keep cache
-      - save_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
+    # Update
+    update:
+        <<: *defaults
+        steps:
+        - checkout
+        - restore_cache:
+            key: yarn-{{ checksum "yarn.lock" }}
+        - run:
+            name: Install Dependencies
+            command: NODE_ENV=dev yarn
+        - save_cache:
+            key: yarn-{{ checksum "yarn.lock" }}
+            paths:
+                - "node_modules"
+        - run:
+            name: Fetch
+            command: ./scripts/fetch
+        - run:
+            name: Update
+            command: ./scripts/update
+        - persist_to_workspace:
+          root: ~/project
           paths:
-            - "node_modules"
+            - packages/*
 
-      # Fetch
-      - run:
-          name: Fetch
-          command: ./scripts/fetch
+    # Publish
+    publish:
+        <<: *defaults
+        steps:
+        - checkout
+        - attach_workspace:
+          at: ~/project
+        - run:
+            name: Publish
+            command: |
+                echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                ./scripts/workspace-run npm publish
 
-      # Update
-      - run:
-          name: Update
-          command: ./scripts/update
+workflows:
+  version: 2
+  update-publish:
+    triggers:
+        - schedule:
+            cron: "0 0 * * *"
+            filters:
+                branches:
+                    only:
+                        - master
+    jobs:
+        - update
+        - publish:
+            requires:
+                - update
+            filters:
+                branches:
+                    only: master

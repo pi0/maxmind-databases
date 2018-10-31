@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+for dir in packages/*; do
+ echo "$dir"
+ pushd $dir
+  $@
+ popd
+done

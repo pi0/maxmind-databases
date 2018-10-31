@@ -4,8 +4,7 @@
 
 ## Packages
 
-[![CircleCI](https://circleci.com/gh/pi0/maxmind-databases.svg?style=svg)](https://circleci.com/gh/pi0/maxmind-databases)
- All packages are auto built and published every monday.
+All packages will be auto updated and published every monday. [![CircleCI](https://circleci.com/gh/pi0/maxmind-databases.svg?style=svg)](https://circleci.com/gh/pi0/maxmind-databases)
 
 Package | Latest  | Size
 --------|---------|---------

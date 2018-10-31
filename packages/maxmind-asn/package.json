@@ -1,7 +1,9 @@
 {
   "name": "maxmind-asn",
   "version": "1.0.1-20181030",
+  "license": "CC-BY-SA-4.0",
   "description": "Maxmind GeoLite2 ASN Database",
+  "repository": "pi0/maxmind-databases",
   "keywords": [
     "geoip",
     "maxmind",

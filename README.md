@@ -4,6 +4,8 @@
 
 [![CircleCI](https://circleci.com/gh/pi0/maxmind-databases.svg?style=svg)](https://circleci.com/gh/pi0/maxmind-databases)
 
+**IMPORTANT:** Please read about [license changes](https://blog.maxmind.com/2019/12/18/significant-changes-to-accessing-and-using-geolite2-databases/) which are effective starting by **December 30, 2019**
+
 ## Packages
 
 All packages will be auto updated and published every monday.
